@@ -19,9 +19,7 @@ void LCD_ISR()
 	{
 		while (STAT_REG & STATF_BUSY);
 		if (j == 70) SHOW_WIN;
-		if (j != 70) HIDE_WIN;
-		// if (battle == true) LYC_REG = z;
-		// else 
+		else if (j != 70) HIDE_WIN;
 		LYC_REG = z;
 	}
 	else if (LYC_REG == z)
